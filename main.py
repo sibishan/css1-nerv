@@ -43,7 +43,7 @@ def write_raw_historical_data(symbols):
         historical_data.to_csv(csv_filename)
 
 # Generate statistics and plot and write them to a file for each symbol
-def generate_plots_and_stats(ticker_symbols):
+def generate_plots_and_stats(symbols):
     # Ensure the 'plots' directory exists
     if not os.path.exists('plots'):
         os.makedirs('plots')
@@ -52,7 +52,7 @@ def generate_plots_and_stats(ticker_symbols):
     if not os.path.exists('raw_stats'):
         os.makedirs('raw_stats')
 
-    for symbol in ticker_symbols:
+    for symbol in symbols:
         # Read historical data from CSV file
         csv_filename = f"raw_historical_data/{symbol}_historical_data.csv"
         historical_data = pd.read_csv(csv_filename, index_col='Date', parse_dates=True)
@@ -77,7 +77,8 @@ def generate_plots_and_stats(ticker_symbols):
         plt.close()
 
 
-ticker_symbols = ["ALL.AX", "ANZ.AX", "BHP.AX", "CBA.AX", "CSL.AX", "FMG.AX", "GMG.AX", "MQG.AX", "NAB.AX", "REA.AX", "RIO.AX", "TCL.AX", "TLS.AX", "WBC.AX", "WES.AX", "WOW.AX", "WDS.AX", "XRO.AX"]
+ticker_symbols = ["ALL.AX", "ANZ.AX", "BHP.AX", "CBA.AX", "CSL.AX", "FMG.AX", "GMG.AX", 
+                  "MQG.AX", "NAB.AX", "REA.AX", "RIO.AX", "TCL.AX", "TLS.AX", "WBC.AX", "WES.AX", "WOW.AX", "WDS.AX", "XRO.AX"]
 
 write_profiles(ticker_symbols)
 write_raw_historical_data(ticker_symbols)
