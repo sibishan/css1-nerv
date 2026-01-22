@@ -9,7 +9,7 @@
 - SRI DASARI - 24804561
 
 ---
-
-This project contributes to computer science and quantitative finance development by investigating contemporary trends and machine learning methods used for stock price prediction. Machine learning models will be implemented and evaluated, leading to providing experimental results and takeaways for further research.
+## Codebase Purpose
+This project contributes to computer science and quantitative finance development by investigating contemporary trends and machine learning methods used for stock price prediction. Machine learning models are implemented and evaluated, leading to providing experimental results and takeaways for further research.
 
 ---
